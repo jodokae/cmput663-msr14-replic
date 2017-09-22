@@ -2,7 +2,7 @@
 
 Download mysql dataset http://ghtorrent.org/msr14.html
 
-Done: 
+``` 
 $ mysql -u root -p
 mysql > create user 'msr14'@'localhost' identified by 'msr14';
 mysql> create database msr14;
@@ -34,5 +34,6 @@ mysql> select language,count(*) from projects where forked_from is null group by
 | TypeScript |        1 |
 +------------+----------+
 13 rows in set (0.01 sec)
+```
 
 http://ghtorrent.org/files/schema.pdf
