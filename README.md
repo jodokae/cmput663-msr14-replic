@@ -1,5 +1,7 @@
 # cmput663-msr14-replic
 
+# Dataset # 
+
 Download mysql dataset http://ghtorrent.org/msr14.html
 
 ``` 
@@ -39,3 +41,14 @@ mysql> select language,count(*) from projects where forked_from is null group by
 ```
 
 http://ghtorrent.org/files/schema.pdf
+
+# Senti Strength #
+
+Get SentiStrength for Java (http://sentistrength.wlv.ac.uk/) For academic purpose for free if you write a mail to m (dot) thelwall (at) wlv.ac.uk
+
+Test: 
+```
+$ java -jar SentiStrengthCom.jar sentidata SentiStrengthData/ input testfile.txt
+```
+
+Output gets generated as txt
