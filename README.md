@@ -16,6 +16,8 @@ $ mysql -u msr14 -p msr14
 
 #TRY: 
 mysql> select language,count(*) from projects where forked_from is null group by language;
+
+#Example: My result was not exactly the same
 +------------+----------+
 | language   | count(*) |
 +------------+----------+
