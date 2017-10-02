@@ -23,39 +23,4 @@ def RateSentiment(sentiString):
 #  either modify the above to submit a file
 #  or modify the above to send multiple lines through multiple calls of p.communicate(b)
 
-
-import pymysql
-import time
-conn = pymysql.connect(host='localhost', user='msr14', passwd='msr14', db='msr14')
-cur = conn.cursor()
-cur.execute('select id, body from commit_comments limit 5;')
-idList = copy.copy(cur)
-iterations = 0
-for commitID in idList:
-	if True:
-		id = commitID[0]
-		#cur.execute('select body from commit_comments where id = ' + str(id) + ';')
-		#bodyList = copy.copy(cur)
-
-		#body = [b[0].replace('\n', '').replace('\r', '') for b in bodyList][0]
-		body = commitID[1]
-
-		print(body)
-		sentiment = RateSentiment(body)
-		print(sentiment)		
-		#a, b = sentiment.split()
-		#c  = [int(a), int(b)]
-		#r = 2
-		#if np.abs(c[0]) > np.abs(c[1]):
-		#	r = 0
-		#else:
-		#	r = 1
-		#s = c[r]
-		#iterations = iterations + 1
-		#print('Set ID ' + str(id) + ' to: ' + str(s) + ' (' + str(iterations) + '/' + str(idList.rowcount) + ')')
-		#cur.execute('UPDATE commit_comments SET sentiment = ' + str(s) + ' WHERE id =  ' + str(id) + '')	
-
-cur.close()
-conn.commit()
-conn.close()
-
+print(RateSentiment('Wow amazing thread! even If I’m not a Rails developer!'))

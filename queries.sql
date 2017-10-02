@@ -17,10 +17,9 @@ GROUP BY projects.language
 
 
 -- Table 3
-SELECT weekday(commits.created_at), COUNT(DISTINCT commit_comments.id), AVG(commit_comments.sentiment), STD(commit_comments.sentiment)
+SELECT weekday(commit_comments.created_at), COUNT(DISTINCT commit_comments.id), AVG(commit_comments.sentiment), STD(commit_comments.sentiment)
 FROM commit_comments
-INNER JOIN commits on commit_comments.commit_id = commits.id
-GROUP BY weekday(commits.created_at)
+GROUP BY weekday(commit_comments.created_at)
 
 
 -- Table 4
