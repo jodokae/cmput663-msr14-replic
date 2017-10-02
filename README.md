@@ -75,9 +75,7 @@ update commit_comments set daytime = 3 where hour(commit_comments.created_at) >=
 
 ```
 
-# TEMP # 
-
-create table commit_sentiment(id int primary key, sentiment int);
+# Results # 
 
 -- Figure 1
 select projects.name, AVG(commit_sentiment.sentiment)
@@ -88,12 +86,7 @@ INNER JOIN commit_sentiment on commit_sentiment.id = commit_comments.id
 WHERE projects.name LIKE 'Jquery' OR projects.name LIKE 'Rails' OR projects.name LIKE 'CraftBukkit' OR projects.name LIKE 'Diaspora' OR projects.name LIKE 'MaNGOS' OR projects.name LIKE 'TrinityCore'
 GROUP BY projects.name;
 
-
-
 -- Figure 2
- alter table commit_sentiment add sentiment_type int;
-update commit_sentiment set sentiment_type = 0 where sentiment >= -1 && sentiment <= 1;
-
 select projects.name, commit_sentiment.sentiment_type, COUNT(commit_sentiment.sentiment_type)
 FROM commit_comments
 INNER JOIN commits ON commits.id = commit_comments.commit_id
@@ -111,19 +104,11 @@ INNER JOIN commit_sentiment on commit_sentiment.id = commit_comments.id
 where projects.language like 'C' or projects.language like 'C++' or projects.language like 'Java' or projects.language like 'Python' or projects.language like 'Ruby'
 GROUP BY projects.language
 
-
 -- Table 3
 select dayname(commit_comments.created_at),count(distinct commit_comments.id),avg(commit_sentiment.sentiment),std(commit_sentiment.sentiment)
 from commit_comments 
 inner join commit_sentiment on commit_comments.id = commit_sentiment.id 
 group by dayname(created_at);
-
-
-alter table ...
-
-update commit_comments set daytime = 3 where hour(commit_comments.created_at) >= 23 || hour(commit_comments.created_at) < 6;
-update commit_comments set daytime = 3 where hour(commit_comments.created_at) >= 6 && hour(commit_comments.created_at) < 12;
-
 
 -- Table 4
 select daytime,count(distinct commit_comments.id),avg(commit_sentiment.sentiment),std(commit_sentiment.sentiment)
