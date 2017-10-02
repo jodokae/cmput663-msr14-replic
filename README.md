@@ -48,7 +48,13 @@ Get SentiStrength for Java (http://sentistrength.wlv.ac.uk/) For academic purpos
 
 Test: 
 ```
-$ java -jar SentiStrengthCom.jar sentidata SentiStrengthData/ input testfile.txt
+$ java -jar SentiStrengthCom.jar sentidata SentiStrength_Data/ input testfile.txt
 ```
 
 Output gets generated as txt
+
+# Analysis #
+
+
+add a column to commit_comments table, called sentiment
+run senti.py. (put the jar file and the data beside of this file)
