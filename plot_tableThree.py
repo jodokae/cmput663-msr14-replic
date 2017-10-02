@@ -6,7 +6,8 @@ from prettytable import PrettyTable
 table_three_query = 'select weekday(commit_comments.created_at),count(distinct commit_comments.id),avg(commit_sentiment.sentiment),std(commit_sentiment.sentiment) \
 from commit_comments \
 inner join commit_sentiment on commit_comments.id = commit_sentiment.id \
-group by weekday(created_at);'
+group by weekday(created_at) \
+HAVING COUNT(commit_comments.id) > 200;'
 
 conn = pymysql.connect(host='localhost', user='msr14', passwd='msr14', db='msr14')
 curs = conn.cursor() #Use a client side cursor so you can access curs.rowcount
