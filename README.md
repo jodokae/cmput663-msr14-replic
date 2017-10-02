@@ -2,7 +2,7 @@
 
 # Setup
 
-##Database ##
+## Database ##
 
 Download mysql dataset http://ghtorrent.org/msr14.html
 
@@ -17,7 +17,7 @@ mysql> flush privileges;
 
 $ zcat msr14-mysql.gz |mysql -u msr14 -p msr14
 $ mysql -u msr14 -p msr14
-
+```
 
 ## Senti Strength ##
 
