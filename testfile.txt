@@ -1,3 +1,6 @@
-this is a test file.
-Hate is a very strong feeling.
-Looove is the mightiest force in the world.
+Sigh? It's fixed, man - rejoice!!
+Wow amazing thread! even If I'm not a Rails developer!
+MY PRECIOUSSS!!!
+If PHP code is producing errors with register globals on you are terrible terrible programmer. If you are using magic quotes you are simply stupid.
+But this commit message makes me sad :cry:
+This is really terrible - changing :private to :public without any deprecation warning? Not cool.
