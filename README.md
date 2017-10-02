@@ -1,5 +1,7 @@
 # cmput663-msr14-replic
 
+This repository tries to replicate the results of the paper https://dl.acm.org/citation.cfm?id=2597118 . Since the SentiStrength version and the GitHub Dataset were not exactly equal the results differ from the published ones. 
+
 # Setup
 
 ## Database ##
