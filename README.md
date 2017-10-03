@@ -3,6 +3,7 @@
 This repository tries to replicate the results of the paper https://dl.acm.org/citation.cfm?id=2597118 . Since the SentiStrength version and the GitHub Dataset were not exactly equal the results differ from the published ones. 
 
 Section 2.2 of the paper gave some difficulties because it was not absolutly clear how the authors extracted the sentiments for the commits. We understood it so that they gave to whole commit to the sentiment analysis tool and worked on the given snippets. But because the results of this analyse is different of what is explained in this section it is also possible that they extracted the snippets with the tool run the sentiment analysis sentence by sentence and put it then back together. But we assumed that this is very unlikely and just the results of the tool changed in the last three years. 
+In Section 3.1 they say they only analysed the commits of projects with more than 200 comments. We applied that constraint for table 3 but the results were more different from theirs than without this constraint. So we did not apply it for the other data.
 
 Hence, we have different results than in the paper, the sentiments are generally more positive. This is also due to the fact that they proposed that the negative result of the analysis needs to be 1.5 times higher before they interpret a commit as negative. 
 
