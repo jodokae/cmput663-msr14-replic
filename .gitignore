@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-msr14-mysql.gz
-SentiStrengthCom.jar
-SentiStrengthData/*
-SentiStrengthJavaManual.doc
-
-*_out.txt
-=======
 msr14-mysql.gz
 SentiStrengthCom.jar
 SentiStrength_Data/*
 SentiStrengthJavaManual.doc
-
-*_out.txt
->>>>>>> 9e8ca6827b1e789fdba79a456e9812035e8523f1

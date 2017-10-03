@@ -15,17 +15,14 @@ projects.name LIKE \'Diaspora\' OR projects.name LIKE \'MaNGOS\' OR projects.nam
 GROUP BY projects.name, commit_sentiment.sentiment_type;'
 
 conn = pymysql.connect(host='localhost', user='msr14', passwd='msr14', db='msr14')
-curs = conn.cursor() #Use a client side cursor so you can access curs.rowcount
+curs = conn.cursor() 
 numrows = curs.execute(figure_two_query)
 
-#curs.fecthall() is the iterator as per Kieth's answer
-#count=numrows means advance allocation
-#dtype='i4,i4' means two columns, both 4 byte (32 bit) integers
-#A = numpy.fromiter(curs.fetchall(), count=numrows, dtype=('str, float32'))
 name = []
 pos = []
 neu = []
 neg = []
+
 A = [row for row in curs]
 for ind, item in enumerate(A):
     if ind % 3 == 0:
@@ -36,10 +33,6 @@ for ind, item in enumerate(A):
         neu.append(item[2])
     if float(item[1]) == 1:
         pos.append(item[2])
-#print(name)
-#print(neg)
-#print(neu)
-#print(pos)
 
 for i in range(0,6):
     summ = pos[i] + neu[i] + neg[i]
@@ -58,9 +51,6 @@ p2 = plt.bar(y_pos, neu, width, bottom=pos)
 p3 = plt.bar(y_pos, neg, width, bottom=list(map(sum, zip(pos, neu))))
 
 plt.legend((p1[0], p2[0], p3[0]), ('Positive', 'Neutral', 'Negative'))
-
-
-#plt.bar(y_pos, value)
 plt.xticks(y_pos, name)
 plt.show()
 
