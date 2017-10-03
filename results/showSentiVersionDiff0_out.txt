@@ -1,0 +1,7 @@
+Positive	Negative	Text
+5	-2	Sigh? It's fixed, man - rejoice!!
+5	-1	Wow amazing thread! even If I'm not a Rails developer!
+5	-1	MY PRECIOUSSS!!
+1	-5	If PHP code is producing errors with register globals on you are terrible terrible programmer. If you are using magic quotes you are simply stupid.
+1	-5	But this commit message makes me sad :cry: 
+1	-5	This is really terrible - changing :private to :public without any deprecation warning? Not cool.
