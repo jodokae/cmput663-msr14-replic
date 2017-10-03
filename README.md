@@ -18,6 +18,8 @@ Via the plot_xy.py files it is possible to reproduce the tables 2, 3 and 4 and f
 
 # Setup #
 
+To replicate our results MySQL and Python3 are needed. It is necessary to install the numpy and matplotlib libraries for python.
+
 ## Database ##
 
 Download mysql dataset http://ghtorrent.org/msr14.html
